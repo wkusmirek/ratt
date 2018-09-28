@@ -17,7 +17,8 @@ RUN conda install mummer blast
 USER root
 
 RUN cd /opt && \
-    git clone https://gitlab.com/LPCDRP/RATT.git ratt
+    git clone https://gitlab.com/LPCDRP/RATT.git ratt \
+    svn co "https://svn.code.sf.net/p/ratt/code/" ratt-code
 
 USER biodocker
 
